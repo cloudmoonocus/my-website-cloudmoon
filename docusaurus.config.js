@@ -30,11 +30,11 @@ const config = {
       ({
         docs: {
           sidebarPath: require.resolve("./sidebars.js"),
-          editUrl: "https://github.com/cloudmoonocus/cloudmoonocus.github.io/",
+          editUrl: "https://github.com/cloudmoonocus/my-website-cloudmoon/",
         },
         blog: {
           showReadingTime: true,
-          editUrl: "https://github.com/cloudmoonocus/cloudmoonocus.github.io/",
+          editUrl: "https://github.com/cloudmoonocus/my-website-cloudmoon/",
         },
         theme: {
           customCss: require.resolve("./src/css/custom.css"),
