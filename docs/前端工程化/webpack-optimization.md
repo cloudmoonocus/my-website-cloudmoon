@@ -1,6 +1,6 @@
 ---
-sidebar_position: 1
-description: Webpack
+sidebar_position: 2
+description: Webpack 高级优化
 tags:
   - 前端工程化
   - Webpack
