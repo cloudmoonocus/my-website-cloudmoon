@@ -63,7 +63,7 @@ const config = {
           { to: "/blog", label: "博客", position: "right" },
           { to: "/project", label: "项目", position: "right" },
           {
-            href: "https://github.com/cloudmoonocus",
+            href: "https://github.com/cloudmoonocus/my-website-cloudmoon",
             label: "GitHub",
             position: "right",
           },
