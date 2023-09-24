@@ -51,17 +51,19 @@ const MyProject: React.FC = () => {
   const [position, setPosition] = useState<string>("-0%");
 
   const changeProduct = (i: number) => {
-    setPosition(`-${i * 100}%`);
-    setIndex(i);
+    requestAnimationFrame(() => {
+      setPosition(`-${i * 100}%`);
+      setIndex(i);
+    });
   };
 
   return (
     <Layout
       noFooter
-      description="Frontend 前端 Vue React Bolg 博客 Note 笔记 Learn 学习 面试 Project 项目 Route 学习路线 成长"
+      description="Frontend 前端 Vue React Bolg 博客 Note 笔记 Learn 学习 面试 Project 项目 Route 学习路线 成长 Cloudmoon 云月"
     >
       <div className={style.main}>
-        <div style={{ transform: `translateY(${position})` }}>
+        <div style={{ transform: `translateY(${position})`, transition: "transform .8s ease" }}>
           {productIntro.map((item) => {
             return (
               <div
