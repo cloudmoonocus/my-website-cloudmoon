@@ -1,5 +1,5 @@
 ---
-sidebar_position: 2
+sidebar_position: 3
 description: Webpack 高级优化
 tags:
   - 前端工程化
