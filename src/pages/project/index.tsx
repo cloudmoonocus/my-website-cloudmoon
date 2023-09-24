@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import classNames from "classnames";
 import Layout from "@theme/Layout";
 import style from "./styles.module.css";
@@ -48,12 +48,12 @@ const productIntro = [
 
 const MyProject: React.FC = () => {
   const [index, setIndex] = useState<number>(0);
-  const [position, setPosition] = useState<string>("-0%");
+  const containerRef = useRef<HTMLDivElement>(null);
 
   const changeProduct = (i: number) => {
     requestAnimationFrame(() => {
-      setPosition(`-${i * 100}%`);
       setIndex(i);
+      containerRef.current!.style.transform = `translateY(-${i * 100}%)`;
     });
   };
 
@@ -63,7 +63,7 @@ const MyProject: React.FC = () => {
       description="Frontend 前端 Vue React Bolg 博客 Note 笔记 Learn 学习 面试 Project 项目 Route 学习路线 成长 Cloudmoon 云月"
     >
       <div className={style.main}>
-        <div style={{ transform: `translateY(${position})`, transition: "transform .8s ease" }}>
+        <div ref={containerRef} style={{ transform: `translateY(-0%)`, transition: "transform .8s ease" }}>
           {productIntro.map((item) => {
             return (
               <div
