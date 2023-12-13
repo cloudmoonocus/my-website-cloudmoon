@@ -48,7 +48,7 @@ const config = {
     ({
       image: "img/docusaurus-social-card.jpg",
       navbar: {
-        title: "记录成功的一个「茅屋🛖」",
+        title: "记录成长过程的一个「茅屋🛖」",
         logo: {
           alt: "Cloudmoon",
           src: "img/hovel.png",
