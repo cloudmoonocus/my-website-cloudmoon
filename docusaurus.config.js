@@ -124,6 +124,13 @@ const config = {
                 </a>
                 `,
               },
+              {
+                html: `
+                <a href="https://vercel.com" target="_blank">
+                  <img src="/img/power-by-vercel.svg" alt="Powered by Vercel" height="60" style="margin-top: 10px;" />
+                </a>
+                `,
+              },
             ],
           },
         ],
