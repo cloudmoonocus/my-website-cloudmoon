@@ -47,6 +47,14 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       image: "img/docusaurus-social-card.jpg",
+      metadata: [
+        {
+          name: "keywords",
+          content:
+            "Frontend 前端 Vue React Bolg 博客 Note 笔记 Learn 学习 面试 Project 项目 Route 学习路线 成长 Cloudmoon 云月 茅屋 编程 Coding",
+        },
+        { name: "twitter:card", content: "Cloudmoon-Website" },
+      ],
       navbar: {
         title: "记录成长过程的一个「茅屋🛖」",
         logo: {
@@ -140,20 +148,19 @@ const config = {
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
       },
-      algolia: {
-        appId: "appId",
-        apiKey: "apiKey",
-        indexName: "YOUR_INDEX_NAME",
-        contextualSearch: true,
-        externalUrlRegex: "external\\.com|domain\\.com",
-        replaceSearchResultPathname: {
-          from: "/docs/", // or as RegExp: /\/docs\//
-          to: "/",
-        },
-        searchParameters: {},
-        searchPagePath: "search",
-      },
     }),
+
+  plugins: [
+    // 搜索
+    [
+      require.resolve("@cmfcmf/docusaurus-search-local"),
+      {
+        indexDocs: true,
+        indexBlog: true,
+        language: "zh",
+      },
+    ],
+  ],
 };
 
 module.exports = config;
