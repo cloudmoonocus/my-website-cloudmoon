@@ -62,11 +62,16 @@ const config = {
           src: "img/hovel.png",
         },
         items: [
+          // {
+          //   type: "docSidebar",
+          //   sidebarId: "tutorialSidebar",
+          //   position: "right",
+          //   label: "笔记",
+          // },
           {
-            type: "docSidebar",
-            sidebarId: "tutorialSidebar",
-            position: "right",
+            href: "https://www.yuque.com/cloudmoon",
             label: "笔记",
+            position: "right",
           },
           { to: "/blog", label: "博客", position: "right" },
           { to: "/project", label: "项目", position: "right" },
@@ -85,7 +90,7 @@ const config = {
             items: [
               {
                 label: "笔记",
-                to: "/docs",
+                href: "https://www.yuque.com/cloudmoon",
               },
               {
                 label: "博客",
